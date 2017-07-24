@@ -28,3 +28,8 @@ IMG = imresize(IMG,0.5);%画像の縮小
 IMG2 = imresize(IMG,32,'box'); %画像の拡大
 imagesc(IMG2); axis image; %画像の表示
 
+考察：これは、imresize(A,s)によって行列Aに格納された画像のサイズをs倍して出力することを用いて
+解像度を下げるプログラムである。
+ORG=imread('ngc6543a.jpg');で画像を入力しimagesc(ORG);axis imageで表示された画像を
+IMG=imresize(ORG,0.5);で画像を1/2に縮小した後、IMG2=imresize(IMG,2,'box');で2倍に
+することによって、一時停止するごとに画像がぼやけるようになることが分かる。
